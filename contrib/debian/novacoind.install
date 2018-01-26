@@ -1,0 +1,2 @@
+debian/bin/lifestylecoind usr/bin
+src/lifestylecoind usr/lib/lifestylecoin
