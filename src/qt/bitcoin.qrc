@@ -47,6 +47,7 @@
   </qresource>
   <qresource prefix="/images">
     <file alias="about">res/images/about.png</file>
+    <file alias="bkg-0">res/images/bkg-0.png</file>
     <file alias="splash">res/images/splash.png</file>
     <file>res/images/splash_testnet.png</file>
     <file alias="checkbox_checked">res/images/checkbox_checked.png</file>

@@ -50,7 +50,8 @@ public:
             foreground = qvariant_cast<QColor>(value);
         }
 
-        painter->setPen(foreground);
+//        painter->setPen(foreground);
+        painter->setPen(QColor(255, 255, 255));
         painter->drawText(addressRect, Qt::AlignLeft|Qt::AlignVCenter, address);
 
         if(amount < 0)
@@ -65,7 +66,8 @@ public:
         {
             foreground = option.palette.color(QPalette::Text);
         }
-        painter->setPen(foreground);
+//        painter->setPen(foreground);
+        painter->setPen(QColor(255, 255, 255));
         QString amountText = BitcoinUnits::formatWithUnit(unit, amount, true);
         if(!confirmed)
         {
@@ -99,7 +101,7 @@ OverviewPage::OverviewPage(QWidget *parent) :
     txdelegate(new TxViewDelegate()),
     filter(0)
 {
-    this->setStyleSheet("QMainWindow {background-color: #000000;}");
+//    this->setStyleSheet("QMainWindow {background-color: #000000;}");
     ui->setupUi(this);
 
 
@@ -117,6 +119,7 @@ OverviewPage::OverviewPage(QWidget *parent) :
 
     // start with displaying the "out of sync" warnings
     showOutOfSyncWarning(true);
+
 }
 
 void OverviewPage::handleTransactionClicked(const QModelIndex &index)

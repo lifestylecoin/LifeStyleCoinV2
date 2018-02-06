@@ -96,8 +96,12 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     rpcConsole(0),
     nWeight(0)
 {
-    resize(950, 550);
+    setFixedSize(969, 634);
+    //resize(969, 636);
     setWindowTitle(tr("LifeStyleCoin") + " - " + tr("Wallet"));
+	qApp->setStyleSheet("QMainWindow { background-image:url(:images/bkg-0);background-repeat: repeat-xy;border:none;font-family:'Open Sans,sans-serif'; }");
+//	qApp->setStyleSheet("QMainWindow { background:white;border:none;font-family:'Open Sans,sans-serif'; }");
+
 #ifndef Q_OS_MAC
     qApp->setWindowIcon(QIcon(":icons/bitcoin"));
     setWindowIcon(QIcon(":icons/bitcoin"));
@@ -154,6 +158,13 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
 //    receiveCoinsPage->setStyleSheet("QTableView {background-color: #34373E; color: #FFFFFF; selection-background-color: #B3B6BD; selection-color: #000000; alternate-background-color: #34373E;}");
 //    sendCoinsPage->setStyleSheet("QWidget {background-color: #000000; color: #FFFFFF;}");
 //    transactionsPage->setStyleSheet("QWidget {background-color: #000000; color: #FFFFFF;} QTableView {background-color: #34373E; color: #FFFFFF; selection-background-color: #B3B6BD; selection-color: #000000; alternate-background-color: #34373E;}");
+
+	overviewPage->setStyleSheet("QWidget {color: #FFFFFF; selection-color: #FFFFFF}"); // QTableView {color: #000000;}");
+	transactionsPage->setStyleSheet("QWidget {background-color: #ebebeb;}"); // QTableView {background-color: #43b81d; color: #FFFFFF; selection-background-color: #358d19; selection-color: #FFFFFF; alternate-background-color: #43b81d;}");
+	sendCoinsPage->setStyleSheet("QWidget {background-color: #ebebeb;}"); //
+	receiveCoinsPage->setStyleSheet("QWidget {background-color: #ebebeb;}"); // QTableView {background-color: #43b81d; color: #FFFFFF; selection-background-color: #358d19; selection-color: #FFFFFF; alternate-background-color: #43b81d;}");
+	addressBookPage->setStyleSheet("QWidget {background-color: #ebebeb;}"); // QTableView {background-color: #43b81d; color: #FFFFFF; selection-background-color: #358d19; selection-color: #FFFFFF; alternate-background-color: #43b81d;}");
+	messagePage->setStyleSheet("QWidget {background-color: #ebebeb; }"); // QTableView {background-color: #ebebeb; color: #000000; selection-background-color: #ebebeb; selection-color: #FFFFFF; alternate-background-color: #ebebeb;}");
 
 
     // Create status bar
